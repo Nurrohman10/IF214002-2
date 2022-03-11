@@ -17,4 +17,4 @@ Status-novel
 Id-reders
 Pass-readers 
 Nama-barang
-Status-barang
+Status-barang 

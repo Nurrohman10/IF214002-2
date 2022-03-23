@@ -1,24 +1,24 @@
 
-Entitas dan Atribut
+#Entitas dan Atribut
 
--Login
+##Login
 Id-admin/member
 Pass-user
 nomor/email
 
--Novel
+##Novel
 Nama-novel
 Kategori-novel
 TerHot-novel
 Status-novel
 
--Komik
+##Komik
 Nama-komik
 Jenis-komik
 Rekomendasi
 status
 
--Library
+##Library
 komik
 novel
 Riwayat

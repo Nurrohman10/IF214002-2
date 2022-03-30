@@ -5,6 +5,9 @@ aplikasi ini dirancang untuk mempermudah pembaca buku secara online. beberapa fi
 - fitur optimasi layar untuk membaca
 - perpustakaan bacaan
 
+![WhatsApp Image 2022-03-30 at 20 09 40](https://user-images.githubusercontent.com/100669802/160843207-4f40a3f2-8424-4458-948a-7177b54e82af.jpeg)
+
+
 # Entitas dan Atribut
 
 ## Login

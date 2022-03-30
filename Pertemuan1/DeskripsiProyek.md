@@ -3,28 +3,31 @@ aplikasi ini dirancang untuk mempermudah pembaca buku secara online. beberapa fi
 - Semua koleksi bahan bacaan dalam satu aplikasi
 - berbagai cerita menarik lainnya
 - fitur optimasi layar untuk membaca
-- 
+- perpustakaan bacaan
 
 # Entitas dan Atribut
 
 ## Login
-- Id-admin/member
+- Id-admin/user
 - Pass-user
-- nomor/email
+- nomor pengguna
+- email pengguna
 
 ## Novel
 - id_Nama-novel
 - Kategori-novel
 - TerHot-novel
 - Status-novel
+- terbaru novel
 
 ## Komik
 - id_Nama-komik
-- Jenis-komik
-- Rekomendasi
-- status
+- kategori-komik
+- Rekomendasi komik
+- terbaru komik
+- status komik
 
 ## Library
 - id komik
-- novel
-- Riwayat
+- id novel
+- Riwayat baca

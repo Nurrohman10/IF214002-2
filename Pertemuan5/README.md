@@ -1,2 +1,2 @@
-![pertemuan5-erd drawio (1)](https://user-images.githubusercontent.com/100669802/162223983-8d456c06-3f0d-4eb8-9a32-a6f41664df8c.png)
+![pertemuan5-erd drawio (2)](https://user-images.githubusercontent.com/100669802/162348608-0c36f6d3-8191-4ac4-a273-3c87b58ca7c8.png)
 

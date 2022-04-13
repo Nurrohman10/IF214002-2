@@ -2,7 +2,7 @@
 
 #### Tabel Admin
 |🔑id_admin|nama_admin|no_hp_admin|pass_admin|alamat_admin|Email_admin|
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|
 |1|asep kudt|087745671111|asepppus|sukaweing Kaler|@asepppgmail.com|
 |2|alip Mandalika|087899881212|alippp|caringin Kidul|@alipsndahgmail.com|
 |3|friday day|087899881212|afridayy|negla|@friday.gmailcom|

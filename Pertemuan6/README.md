@@ -22,11 +22,11 @@
 |3|ujang|naruto|zero|war god|batman|
 
 #### Tabel author
-|🔑id_author|nama_author|
-|---|---|
-|1|rijal kaler|
-|2|tus day|
-|3|ruko|
+|🔑id_author|nama_author|Nama_buku|
+|---|---|---|
+|1|rijal kaler|Overgear|
+|2|tus day|kimetsu|
+|3|ruko|thunder god|
 
 #### Tabel terbaik
 |🔑id_terbaik|nama_buku|jenis_buku|

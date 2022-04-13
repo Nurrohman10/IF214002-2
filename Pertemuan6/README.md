@@ -26,6 +26,7 @@
 |---|---|---|
 |1|rijal kaler|Overgear|
 |2|tus day|kimetsu|
+|2|tus day|war god|
 |3|ruko|thunder god|
 
 #### Tabel terbaik

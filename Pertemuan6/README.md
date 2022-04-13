@@ -8,8 +8,8 @@
 |3|friday day|087899881212|afridayy|negla|@friday.gmailcom|
 
 #### Tabel Buku
-|🔑id_kota|nama_kota|jumlah_kecamatan|
-|---|---|---|
-|1|Kota Bandung|30|
-|2|Kota Sumedang|26|
-|3|Kabupaten Garut|42|
+|🔑id_buku|id_author|id_terbaik|id_terbaru|id_tamat|id_favorit|
+|---|---|---|---|---|---|
+|1|asepp kudet|sololev|overgear|naruto|zodak|
+|2|friday day|one peace|black clover|boruto|overlord|
+|3|ujang|naruto|zero|war god|batman|

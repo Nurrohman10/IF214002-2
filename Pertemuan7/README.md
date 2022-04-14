@@ -5,11 +5,6 @@
 ## Pemanfaatan data historis
 contoh data historis terakhir dibaca di suatu aplikasi
 ## Tabel terakhir di baca
-||buku|
-|---|---|
-|PK|ID|
-||Nama_buku|
-||Chapter_buku|
 
 ||buku|
 |---|---|

@@ -15,6 +15,7 @@ contoh data historis terakhir dibaca di suatu aplikasi
 - karena chapter yang telah dibaca dapat berubah saat baca terakhir kali, maka data historis perlu disimpan
 - dengan bentuk entitas seperti diatas, data histori chapter tidak dapat diketahui
 - maka membuat data entitas untuk menyimpan data histori chapter
+
 ||Readers|
 |---|---|
 |PK|ID|
@@ -28,6 +29,7 @@ contoh data historis terakhir dibaca di suatu aplikasi
 
 Dengan relasi
 |Readers|1:M|Chapter_book|
+|---|---|---|
 
 ```sql
 CREATE TABLE

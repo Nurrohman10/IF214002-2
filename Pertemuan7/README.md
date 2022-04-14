@@ -11,7 +11,15 @@ contoh data historis terakhir dibaca di suatu aplikasi
 ||Nama_buku|
 ||Chapter_buku|
 
-|Buku|
+||buku|
+|---|---|
+|PK|ID|
+||Nama_buku|
+
+||Histori Baca|
+|---|---|
+||Chapter_buku|
+
 
 ```sql
 CREATE TABLE
@@ -19,4 +27,10 @@ CREATE TABLE
 ```python
 print("Quiz Pertemuan 7")
 print("Terakhir dibaca")
-print("id_buku")
+databaseproducts_ tbl(
+   product_id INT NOT NULL AUTO_INCREMENT,
+   product_name VARCHAR(100) NOT NULL,
+   product_manufacturer VARCHAR(40) NOT NULL,
+   submission_date DATE,
+   PRIMARY KEY ( product_id )
+);

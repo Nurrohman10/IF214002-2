@@ -15,9 +15,12 @@ contoh data historis terakhir dibaca di suatu aplikasi
 |---|---|
 |PK|ID|
 ||Nama_buku|
+||Chapter_buku|
 
 ||Histori Baca|
 |---|---|
+|PK|Id_buku|
+|PK|Tanggal_baca|
 ||Chapter_buku|
 
 

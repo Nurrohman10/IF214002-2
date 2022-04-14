@@ -5,7 +5,9 @@
 ## Pemanfaatan data historis
 contoh data historis terakhir dibaca di suatu aplikasi
 ## Tabel terakhir di baca
-|🔑id_buku|Nama_buku|Chapter_buku|
+||buku|
+|PK|Nama_buku|
+||Chapter_buku|
 |---|---|---|
 |1|war god|Chapter-56|
 |2|One peace|Chapter-786|

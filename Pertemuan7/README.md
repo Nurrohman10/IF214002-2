@@ -37,10 +37,22 @@ CREATE TABLE
 ```python
 print("Quiz Pertemuan 7")
 print("Terakhir dibaca")
-databaseproducts_ tbl(
-   id_book INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE Id_readers(
+   id_readers INT,
    Name_book VARCHAR(100) NOT NULL,
    chapter_book VARCHAR(40) NOT NULL,
    submission_date DATE,
-   PRIMARY KEY ( id_book )
+   PRIMARY KEY ( id_readers )
+);
+
+CREATE TABLE Id_readers(
+   id_readers INT,
+   Name_book VARCHAR(100) NOT NULL,
+   PRIMARY KEY ( id_readers )
+);
+
+CREATE TABLE Id_readers(
+   id_readers INT,
+   chapter_book VARCHAR(40) NOT NULL,
+   PRIMARY KEY ( id_readers )
 );

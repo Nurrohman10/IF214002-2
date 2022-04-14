@@ -3,21 +3,31 @@
 
 # Quiz
 ## Pemanfaatan data historis
+## Perubahan ERD untuk entitas yang memiliki data historis
 contoh data historis terakhir dibaca di suatu aplikasi
 ## Tabel terakhir di baca
 
-||buku|
+||Readers|
 |---|---|
 |PK|ID|
-||Nama_buku|
-||Chapter_buku|
+||Name_book|
+||Chapter_book|
+- karena chapter yang telah dibaca dapat berubah saat baca terakhir kali, maka data historis perlu disimpan
+- dengan bentuk entitas seperti diatas, data histori chapter tidak dapat diketahui
+- maka membuat data entitas untuk menyimpan data histori chapter
+||Readers|
+|---|---|
+|PK|ID|
+||Name_book|
 
 ||Histori Baca|
 |---|---|
-|PK|Id_buku|
+|PK|Id_Readers|
 |PK|Tanggal_baca|
-||Chapter_buku|
+||Chapter_book|
 
+Dengan relasi
+|Readers|1:M|Chapter_book|
 
 ```sql
 CREATE TABLE

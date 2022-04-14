@@ -26,8 +26,8 @@ CREATE TABLE
 print("Quiz Pertemuan 7")
 print("Terakhir dibaca")
 databaseproducts_ tbl(
-   product_id INT NOT NULL AUTO_INCREMENT,
-   product_name VARCHAR(100) NOT NULL,
+   id_buku INT NOT NULL AUTO_INCREMENT,
+   Nama_buku VARCHAR(100) NOT NULL,
    product_manufacturer VARCHAR(40) NOT NULL,
    submission_date DATE,
    PRIMARY KEY ( product_id )

@@ -16,3 +16,9 @@ CREATE TABLE
 ```
 ```python
 print("Quiz Pertemuan 7")
+print("Terakhir dibaca")
+print("|🔑id_buku|Nama_buku|Chapter_buku|
+|---|---|---|
+|1|war god|Chapter-56|
+|2|One peace|Chapter-786|
+|3|naruto|chapter-34|")

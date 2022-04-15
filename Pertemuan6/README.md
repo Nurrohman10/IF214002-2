@@ -1,4 +1,4 @@
-## Tabel Normalisasi
+## Tabel Normalisasi 1 dan 2
 
 #### Tabel Admin
 |🔑id_admin|nama_admin|no_hp_admin|pass_admin|alamat_admin|Email_admin|

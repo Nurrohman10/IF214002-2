@@ -1,4 +1,5 @@
-![pertemuan5-erd drawio (3)](https://user-images.githubusercontent.com/100669802/163499136-9cf2f194-9986-49fe-bda9-37b266970fbb.png)
+![pertemuan5-erd drawio (4)](https://user-images.githubusercontent.com/100669802/163505824-a6747949-7616-4ff8-bb66-80b7a0ddcc2f.png)
+
 
 ## Tabel Normalisasi 1 dan 2
 

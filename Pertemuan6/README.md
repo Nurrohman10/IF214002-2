@@ -1,3 +1,5 @@
+![pertemuan5-erd drawio (3)](https://user-images.githubusercontent.com/100669802/163499136-9cf2f194-9986-49fe-bda9-37b266970fbb.png)
+
 ## Tabel Normalisasi 1 dan 2
 
 #### Tabel Admin

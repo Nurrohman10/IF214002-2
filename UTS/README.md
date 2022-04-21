@@ -1,6 +1,6 @@
 # 
 # Aplikasi Baca buku (komik&novel)
-- Deskripsi
+## Deskripsi
 aplikasi ini dirancang untuk mempermudah pembaca buku secara online, dan buku yang tersedia merupakan buku komik dan novel. beberapa fitur-fiutr yang tersedia diantaranya :
 
 - Semua koleksi bahan bacaan dalam satu aplikasi
@@ -9,7 +9,8 @@ aplikasi ini dirancang untuk mempermudah pembaca buku secara online, dan buku ya
 - menandai buku yang disukai
 
 ![Pertemuan3 drawio (1)](https://user-images.githubusercontent.com/100669802/164356211-e7a2e2ad-2142-4fcb-a641-2928a83c32f5.png)
-![pertemuan5-erd drawio (5)](https://user-images.githubusercontent.com/100669802/164354852-0ba23f5e-4e53-4858-bfb9-28468ab7d3e5.png)
+![pertemuan5-erd drawio (6)](https://user-images.githubusercontent.com/100669802/164356374-60bef831-34d5-4f8e-8f7f-a8a3e0a60cd9.png)
+
 
 ## Tabel Normalisasi 1,2 dan 3
 

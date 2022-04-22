@@ -1,3 +1,5 @@
+## Jelaskan contoh-contoh perintah SQL beserta kegunannya !
+
 ## Perintah SELECT 
 Perintah SELECT merupakan perintah dasar SQL yang di gunakan untuk memilih data dari database. Data yang di kembalikan di simpan dalam tabel yang di sebut result-set. SELECT kolom1, kolom2, … FROM nama_tabel;
 SELECT * FROM nama_tabel;
@@ -12,12 +14,14 @@ Operator AND, OR dan NOT merupakan perintah dasar SQL yang biasanya di kombinasi
 
 SELECT kolom1, kolom2, … FROM nama_tabel WHERE kondisi1 AND kondisi2 AND kondisi3;
 SELECT kolom1, kolom2, … FROM nama_tabel WHERE kondisi1 OR kondisi2 OR kondisi3 …;
+
 ## Perintah ORDER BY
 Perintah ORDER BY merupakan perintah dasar SQL yang di gunakan untuk mengurutkan result-set dalam pengurutan ‘ascending’ atau ‘descending’. Secara default perintah ORDER BY menampilkan record dalam pengurutan ‘ascending’ (‘ASC’). Untuk mengurutkan ‘descending’, gunakan kata kunci ‘DESC’.
 
 SELECT kolom1, kolom2, … FROM nama_tabel ORDER BY column DESC;
 
 SELECT nis, nama FROM siswa ORDER BY tahun_lahir DESC;
+
 ##  Perintah INSERT INTO
 Dalam SQL, perintah INSERT INTO merupakan perintah dasar SQL bagian dari perintah untuk DML (Data Manipulation Language) Saya asumsikan Anda telah faham perbedaan DDL, DCL, dan DML. Perintah INSERT INTO dapat di gunakan untuk menambahkan record baru ke dalam tabel.
 
@@ -36,3 +40,5 @@ Aplikasi Baca Buku online (komil&Novel)
 
 ## posgresql
 ![WhatsApp Image 2022-04-22 at 8 39 48 AM](https://user-images.githubusercontent.com/100669802/164579862-e02506d1-79a2-441a-b4e6-4a829891d480.jpeg)
+![WhatsApp Image 2022-04-22 at 8 39 48 AM](https://user-images.githubusercontent.com/100669802/164586613-af43d166-02d1-4360-84aa-52d25383c112.jpeg)
+

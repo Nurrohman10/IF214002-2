@@ -41,7 +41,7 @@ CREATE TABLE public."Admin"
     pass_admin character(16) COLLATE pg_catalog."default" NOT NULL,
     email_admin character varying(50) COLLATE pg_catalog."default" NOT NULL,
     nomor_hp_admin integer NOT NULL,
-    CONSTRAINT "Admin_pkey" PRIMARY KEY (id_admin)
+    CONSTRAINT "Admin_pkey" PRIMARY KEY (id_admin) 
 )
 WITH (
     OIDS = FALSE

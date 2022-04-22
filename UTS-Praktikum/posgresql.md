@@ -1,3 +1,7 @@
+```sql
+CREATE TABLE
+```
+```python
 CREATE TABLE public."Admin"
 (
     id_admin integer NOT NULL,

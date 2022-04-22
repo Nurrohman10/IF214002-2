@@ -33,7 +33,42 @@ Perintah UPDATE merupakan perintah dasar SQL yang di gunakan untuk memperbarui a
 UPDATE nama_tabel SET kolom1 = nilai1, kolom2 = nilai2, … WHERE kondisi;
 ##  Perintah DELETE
 Hampir sama dengan perintah UPDATE, perintah DELETE juga merupakan perintah dasar SQL yang di gunakan untuk menghapus nilai suatu record berdasarkan kriteria tertentu.
+## Normalisasi
+#### Tabel Admin
+|🔑id_admin|nama_admin|no_hp_admin|pass_admin|Email_admin|
+|---|---|---|---|---|---|
+|1|asep kudt|087745671111|asepppus|@asepppgmail.com|
+|2|alip Mandalika|087899881212|alippp|@alipsndahgmail.com|
+|3|friday day|087899881212|afridayy|@friday.gmailcom|
 
+#### Tabel pengguna
+|🔑id_user|nama_user|Pass_user|email_user|
+|---|---|---|---|---|
+|1|asepp kaler|asepp12|@asepp.com|
+|2|san day|sann13|@sanday.com|
+|3|ujang|ujang14|@ujang.com|
+
+#### Tabel Buku
+|🔑id_buku|id_author|is_terbaik|is_terbaru|is_tamat|is_favorit|
+|---|---|---|---|---|---|
+|1|asepp kudet|sololev|overgear|naruto|zero|
+|2|friday day|one peace|black clover|boruto|naruto|
+|3|ujang|naruto|zero|war god|jaki|
+
+#### Tabel author
+|🔑id_author|nama_author|Nama_buku|
+|---|---|---|
+|1|rijal kaler|Overgear|
+|2|tus day|kimetsu|
+|2|tus day|war god|
+|3|ruko|thunder god|
+
+#### Tabel terbaik
+|🔑is_terbaik|nama_buku|
+|---|---|
+|1|onepeace|
+|2|zero|
+|3|black clover|
 ##  Rancang solusi digital dari satu permasalahan yang ada di sekitar Anda
 Aplikasi Baca Buku online (komil&Novel)
 ![pertemuan5-erd drawio (7)](https://user-images.githubusercontent.com/100669802/164587671-fa60d154-0342-4569-8143-1db65321fb81.png)

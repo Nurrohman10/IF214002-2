@@ -34,3 +34,16 @@ Hampir sama dengan perintah UPDATE, perintah DELETE juga merupakan perintah dasa
 Aplikasi Baca Buku online (komil&Novel)
 ![pertemuan5-erd drawio (6)](https://user-images.githubusercontent.com/100669802/164570897-df2e19bc-85c9-4a5b-8aa7-6e5af4301ec8.png)
 
+CREATE TABLE public."Admin"
+(
+    id_admin integer NOT NULL,
+    nama_admin character(30) COLLATE pg_catalog."default" NOT NULL,
+    pass_admin character(16) COLLATE pg_catalog."default" NOT NULL,
+    email_admin character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    nomor_hp_admin integer NOT NULL,
+    CONSTRAINT "Admin_pkey" PRIMARY KEY (id_admin)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;

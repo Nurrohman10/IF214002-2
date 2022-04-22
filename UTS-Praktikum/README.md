@@ -36,9 +36,9 @@ Hampir sama dengan perintah UPDATE, perintah DELETE juga merupakan perintah dasa
 
 ##  Rancang solusi digital dari satu permasalahan yang ada di sekitar Anda
 Aplikasi Baca Buku online (komil&Novel)
-![pertemuan5-erd drawio (6)](https://user-images.githubusercontent.com/100669802/164570897-df2e19bc-85c9-4a5b-8aa7-6e5af4301ec8.png)
-
+![pertemuan5-erd drawio (7)](https://user-images.githubusercontent.com/100669802/164587671-fa60d154-0342-4569-8143-1db65321fb81.png)
 ## posgresql
 ![WhatsApp Image 2022-04-22 at 8 39 48 AM](https://user-images.githubusercontent.com/100669802/164579862-e02506d1-79a2-441a-b4e6-4a829891d480.jpeg)
-![WhatsApp Image 2022-04-22 at 8 39 48 AM](https://user-images.githubusercontent.com/100669802/164586613-af43d166-02d1-4360-84aa-52d25383c112.jpeg)
+![WhatsApp Image 2022-04-22 at 8 45 59 AM](https://user-images.githubusercontent.com/100669802/164587027-e1d13f2e-67de-4c4e-9462-f7e2ec5e0742.jpeg)
+![WhatsApp Image 2022-04-22 at 9 25 57 AM](https://user-images.githubusercontent.com/100669802/164587057-68e38186-da70-4174-8c92-2f7616667956.jpeg)
 

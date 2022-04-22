@@ -36,14 +36,14 @@ Hampir sama dengan perintah UPDATE, perintah DELETE juga merupakan perintah dasa
 ## Normalisasi
 #### Tabel Admin
 |🔑id_admin|nama_admin|no_hp_admin|pass_admin|Email_admin|
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |1|asep kudt|087745671111|asepppus|@asepppgmail.com|
 |2|alip Mandalika|087899881212|alippp|@alipsndahgmail.com|
 |3|friday day|087899881212|afridayy|@friday.gmailcom|
 
 #### Tabel pengguna
 |🔑id_user|nama_user|Pass_user|email_user|
-|---|---|---|---|---|
+|---|---|---|---|
 |1|asepp kaler|asepp12|@asepp.com|
 |2|san day|sann13|@sanday.com|
 |3|ujang|ujang14|@ujang.com|

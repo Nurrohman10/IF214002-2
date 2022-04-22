@@ -56,12 +56,12 @@ Hampir sama dengan perintah UPDATE, perintah DELETE juga merupakan perintah dasa
 |3|ujang|naruto|zero|war god|jaki|
 
 #### Tabel author
-|🔑id_author|nama_author|Nama_buku|
-|---|---|---|
-|1|rijal kaler|Overgear|
-|2|tus day|kimetsu|
-|2|tus day|war god|
-|3|ruko|thunder god|
+|🔑id_author|nama_author|
+|---|---|
+|1|rijal kaler|
+|2|tus day|
+|2|tus day|
+|3|ruko|
 
 #### Tabel terbaik
 |🔑is_terbaik|nama_buku|

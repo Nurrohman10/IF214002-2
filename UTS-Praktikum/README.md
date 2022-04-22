@@ -30,4 +30,7 @@ UPDATE nama_tabel SET kolom1 = nilai1, kolom2 = nilai2, … WHERE kondisi;
 ##  Perintah DELETE
 Hampir sama dengan perintah UPDATE, perintah DELETE juga merupakan perintah dasar SQL yang di gunakan untuk menghapus nilai suatu record berdasarkan kriteria tertentu.
 
-## 
+##  Rancang solusi digital dari satu permasalahan yang ada di sekitar Anda.
+Aplikasi Baca Buku online (komil&Novel)
+![pertemuan5-erd drawio (6)](https://user-images.githubusercontent.com/100669802/164570897-df2e19bc-85c9-4a5b-8aa7-6e5af4301ec8.png)
+

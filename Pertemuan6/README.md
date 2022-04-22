@@ -1,7 +1,7 @@
-![pertemuan5-erd drawio (4)](https://user-images.githubusercontent.com/100669802/163505824-a6747949-7616-4ff8-bb66-80b7a0ddcc2f.png)
+![pertemuan5-erd drawio (7)](https://user-images.githubusercontent.com/100669802/164591509-1f713c3c-3b1d-4950-9b0d-412d4aeef2e0.png)
 
 
-## Tabel Normalisasi 1 dan 2
+## Tabel Normalisasi 1,2 dan 3
 
 #### Tabel Admin
 |🔑id_admin|nama_admin|no_hp_admin|pass_admin|alamat_admin|Email_admin|

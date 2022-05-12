@@ -1,3 +1,25 @@
+## Emphasis
+Miring atau italic : *asterisks* atau _underscores_.
+Tebal atau bold : double **asterisks** atau __underscores__.
+Miring dan tebal : **asterisks dan _underscores_**.
+
+Output:
+|||
+|---|---|
+|Miring atau italic :| asterisks atau underscores.|
+|Tebal atau bold :| double asterisks atau underscores.|
+|Miring dan tebal :| asterisks dan underscores.|
+
+Link
+<https://www.google.com>
+[Google](https://www.google.com)
+[Google](https://www.google.com "Google's Homepage")
+Output:
+
+https://www.google.com
+Google
+Google
+
 # **_SQL languages_**
 
 ---

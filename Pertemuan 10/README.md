@@ -12,7 +12,8 @@
 
 ## Datatypes
 
-*text types
+**text types**
 
-| Data Type | Descripsion |
-| CHAR(size) | Memegang string panjang tetap (dapat berisi huruf, angka, dan karakter khusus). Ukuran tetap ditentukan dalam tanda kurung. Dapat menyimpan hingga 255 karakter |
+|Data Type|Descripsion|
+|---|---|
+|CHAR(size)|Memegang string panjang tetap (dapat berisi huruf, angka, dan karakter khusus). Ukuran tetap ditentukan dalam tanda kurung. Dapat menyimpan hingga 255 karakter|

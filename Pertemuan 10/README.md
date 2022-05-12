@@ -1,24 +1,3 @@
-## Emphasis
-Miring atau italic : *asterisks* atau _underscores_.
-Tebal atau bold : double **asterisks** atau __underscores__.
-Miring dan tebal : **asterisks dan _underscores_**.
-
-Output:
-|||
-|---|---|
-|Miring atau italic :| asterisks atau underscores.|
-|Tebal atau bold :| double asterisks atau underscores.|
-|Miring dan tebal :| asterisks dan underscores.|
-
-Link
-<https://www.google.com>
-[Google](https://www.google.com)
-[Google](https://www.google.com "Google's Homepage")
-Output:
-
-https://www.google.com
-Google
-Google
 
 # **_SQL languages_**
 
@@ -191,4 +170,43 @@ drop
 ```sql
 drop user romulus
 ```
+#About Joins
+![sql join summary](http://i.stack.imgur.com/hzl8e.png)
+```sql
+SELECT customers.id, customers.name, items.name, customers.state 
+FROM customers, items
+WHERE customers.id=seller_id
+ORDER BY customers.id
+```
+**Join tables** -> Joining two tables together in a query output. The third line is important because it shows how the two tables are related (in this case it is their key values).   
 
+```sql
+SELECT customers.name, items.name FROM customers
+LEFT OUTER JOIN items ON customers.id=seller_id
+```
+**LEFT/RIGHT OUTER JOIN** -> Takes the table left of the word 'LEFT' or 'RIGHT' (in this case customers) and joins it regardless of whether it has any values or not. So the above statement shows all users/customers, even if they aren't selling anything.  
+
+#Select with Subqueries 
+Select max and min values
+```sql
+select dt_stueck_titel as Titel, dt_zeit as Zeit
+from tbl_stueck
+where dt_zeit = (select max(dt_zeit) from tbl_stueck)
+or dt_zeit = (select min(dt_zeit) from tbl_stueck)
+order by dt_zeit;
+```
+Select with query in condition
+```sql
+select dt_stueck_titel as Titel, dt_zeit as Zeit
+from tbl_stueck
+where dt_zeit between (select avg(dt_zeit) from tbl_stueck)*0.9
+and (select avg(dt_zeit) from tbl_stueck)*1.1
+order by dt_zeit;
+```
+Select query as value
+```sql
+select dt_stueck_titel as Titel,
+dt_zeit/(select avg(dt_zeit) from tbl_stueck)*100 as Zeit
+from tbl_stueck
+where dt_stueck_titel = 'You Shook Me'
+```

@@ -111,3 +111,62 @@ Update by condition
 update tbl_kunde set name = 'Menzer' where name = 'Waltenspühl-Menzer'
 update tass_police set praem_stufe = 101 where praem_stufe = 108
 ```
+# Delete
+All
+```sql
+delete from tbl_kunde
+```
+Condition
+```sql
+delete from tkey_moral where id_moral_nr = 4
+delete from tbl_kunde where vorname = 'Peter' and name = 'Fischer' or vorname = 'Martin' and name = 'Müller'
+```
+
+# Index
+Create
+```sql
+create unique index ix_kund_name on tbl_kunde (name)
+```
+Disable
+```sql
+alter index ix_kund_name on tbl_kunde disable
+```
+Rebuild
+```sql
+alter index ix_kund_name on tbl_kunde rebuild
+```
+Reorganize
+```sql
+alter index ix_kund_name on tbl_kunde reorganize
+```
+Drop
+```sql
+drop index ix_kund_name on tbl_kunde
+```
+Alter
+```sql
+drop index ix_kund_name on tbl_kunde
+```
+
+#Type
+create
+```sql
+create type tp_moralisches from numeric(9,0)
+```
+
+#Login
+change password
+```sql
+alter login stud23 with password = 'hello' old_password = 'pass_wd23'
+```
+
+#User
+create
+```sql
+create user romulus from login romulus
+```
+drop
+```sql
+drop user romulus
+```
+

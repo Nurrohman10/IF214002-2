@@ -48,3 +48,66 @@
 |TIMESTAMP()| *Stempel waktu. Nilai TIMESTAMP disimpan sebagai jumlah detik sejak zaman Unix (‘1970-01-01 00:00:00’ UTC). Format: YYYY-MM-DD HH:MI:SSCatatan: Rentang yang didukung adalah dari '1970-01-01 00:00:01' UTC hingga '2038-01-09 03:14:07' UTC|
 |TIME()| Suatu waktu. Format: HH:MI:SSCatatan: Rentang yang didukung adalah dari '-838:59:59' hingga '838:59:59'|
 |YEAR()| Setahun dalam format dua digit atau empat digit.Catatan: Nilai yang diizinkan dalam format empat digit: 1901 hingga 2155. Nilai yang diizinkan dalam format dua digit: 70 hingga 69, mewakili tahun dari 1970 hingga 2069|
+
+# Database
+Create
+```sql
+create database dbname;
+```
+Drop
+```sql
+drop database dbname;
+```
+
+# Table
+Check if not exit and create
+```sql
+IF OBJECT_ID('tbl_kunde', N'U') is not null
+	drop table tbl_kunde;
+GO
+create table tbl_kunde (
+  id_kunde int not null primary key,
+  fi_moral_nr int,
+  name varchar(25) not null,
+  vorname varchar not null,
+  wohnort varchar
+);
+GO
+```
+
+# Alter Table
+Primary Key
+```sql
+ALTER TABLE tbl_kunde ADD PRIMARY KEY (id_kunde);
+```
+Foreign Key
+```sql
+ALTER TABLE tbl_kunde ADD CONSTRAINT FK_fi_moral_nr FOREIGN KEY (fi_moral_nr)
+  REFERENCES tkey_moral
+  ON UPDATE CASCADE
+  ON DELETE SET NULL;
+```
+Constraint
+```sql
+ALTER TABLE tkey_moral ADD CONSTRAINT PK_id_moral_nr PRIMARY KEY (id_moral_nr);
+ALTER TABLE tbl_kunde ADD CONSTRAINT FK_fi_moral_nr FOREIGN KEY (fi_moral_nr)
+  REFERENCES tkey_moral
+  ON UPDATE CASCADE
+  ON DELETE SET NULL;
+```
+# Insert
+Selected fields
+```sql
+insert into tkey_moral (id_moral_nr, moral_bez) values (1, 'gut'), (2, 'schlecht'), (3, 'schlecht');
+```
+
+All fields
+```sql
+INSERT INTO tbl_kunde VALUES (3838,1,'Meier','Laura','Waldibrücke')
+```
+# Update
+Update by condition
+```sql
+update tbl_kunde set name = 'Menzer' where name = 'Waltenspühl-Menzer'
+update tass_police set praem_stufe = 101 where praem_stufe = 108
+```

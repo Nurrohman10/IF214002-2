@@ -31,7 +31,7 @@
 **Number types**
 |Data Types|Description|
 |---|---|
-|TINYINT(size)|-128 hingga 127 normal. 0 hingga 255 TANDA TANDATANGANI*. Jumlah digit maksimum dapat ditentukan dalam tanda kurung|
+|TINYINT(size)|-128 hingga 127 normal. 0 hingga 255 UNSIGNED**. Jumlah digit maksimum dapat ditentukan dalam tanda kurung|
 |SMALLINT(size)|-32768 hingga 32767 normal. 0 hingga 65535 TANPA TANDATANGANI*. Jumlah digit maksimum dapat ditentukan dalam tanda kurung|
 |MEDIUMINT(size)| -8388608 hingga 8388607 normal. 0 hingga 16777215 TANPA TANDATANGANI*. Jumlah digit maksimum dapat ditentukan dalam tanda kurung|
 |INT(size)| -2147483648 hingga 2147483647 normal. 0 hingga 4294967295 TIDAK DITANDA TANGANI*. Jumlah digit maksimum dapat ditentukan dalam tanda kurung|
@@ -39,3 +39,12 @@
 |FLOAT(size,d)| Angka kecil dengan titik desimal mengambang. Jumlah digit maksimum dapat ditentukan dalam parameter ukuran. Jumlah maksimum digit di sebelah kanan titik desimal ditentukan dalam parameter d|
 |DOUBLE(size,d)| Angka besar dengan titik desimal mengambang. Jumlah digit maksimum dapat ditentukan dalam parameter ukuran. Jumlah maksimum digit di sebelah kanan titik desimal ditentukan dalam parameter d|
 |DECIMAL(size,d)| DOUBLE disimpan sebagai string , memungkinkan untuk titik desimal tetap. Jumlah digit maksimum dapat ditentukan dalam parameter ukuran. Jumlah maksimum digit di sebelah kanan titik desimal ditentukan dalam parameter d|
+
+**Date Types**
+|Data Types|Description|
+|---|---|
+|DATE()| Sebuah tanggal. Format: YYYY-MM-DDCatatan: Rentang yang didukung adalah dari '1000-01-01' hingga '9999-12-31'|
+|DATETIME()| *Kombinasi tanggal dan waktu. Format: YYYY-MM-DD HH:MI:SSCatatan: Rentang yang didukung adalah dari '1000-01-01 00:00:00' hingga '9999-12-31 23:59:59'|
+|TIMESTAMP()| *Stempel waktu. Nilai TIMESTAMP disimpan sebagai jumlah detik sejak zaman Unix (‘1970-01-01 00:00:00’ UTC). Format: YYYY-MM-DD HH:MI:SSCatatan: Rentang yang didukung adalah dari '1970-01-01 00:00:01' UTC hingga '2038-01-09 03:14:07' UTC|
+|TIME()| Suatu waktu. Format: HH:MI:SSCatatan: Rentang yang didukung adalah dari '-838:59:59' hingga '838:59:59'|
+|YEAR()| Setahun dalam format dua digit atau empat digit.Catatan: Nilai yang diizinkan dalam format empat digit: 1901 hingga 2155. Nilai yang diizinkan dalam format dua digit: 70 hingga 69, mewakili tahun dari 1970 hingga 2069|

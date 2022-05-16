@@ -18,11 +18,12 @@ SQL CHEAT SHEET
 Query data in columns c1, c2 from a table|
 |**SELECT * FROM t;**
 Query all rows and columns from a table|
-|**SELECT** c1, c2 **FROM t
+|**SELECT c1, c2 FROM t
 WHERE condition;** Query data and filter rows with a condition|
-|**SELECT DISTINCT** c1 **FROM t
+|**SELECT DISTINCT c1 FROM t
 WHERE condition;** Query distinct rows from a table|
-|**SELECT** c1, c2 **FROM t
+|**SELECT** c1, c2 
+**FROM t
 ORDER BY c1 ASC [DESC];**
 Sort the result set in ascending or descending
 order|

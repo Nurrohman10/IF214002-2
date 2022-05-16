@@ -1,4 +1,4 @@
--------
+--------
 SQL Options
 READ_COMMITTED_SNAPSHOT/OFF
 ANSI_NULLS /OFF

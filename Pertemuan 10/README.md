@@ -247,6 +247,7 @@ where dt_stueck_titel = 'You Shook Me'
 
 ### Tugas 
 # ``Query data Penduduk``
+-----
 ```python
 # Cari Data umur penduduk di kabupaten 3204
 ```python

@@ -247,7 +247,7 @@ where dt_stueck_titel = 'You Shook Me'
 
 ### Tugas 
 # ``Query data Penduduk``
-
+# Cari Data umur penduduk di kabupaten 3204
 ```python
 SELECT id, nama_lengkap, kode_kabupaten, nomor_hp, gender, tanggal_lahir, ijazah_terakhir, pekerjaan, penghasilan_bulanan, TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) AS umur FROM penduduk
 WHERE TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) > 25 AND kode_kabupaten='3204';
@@ -263,8 +263,9 @@ SELECT *
  FROM penduduk
  ORDER BY nama_lengkap ASC, gender DESC;
  
-# Sort data umur Penduduk Lebih 25 tahun
+# Sort data umur Penduduk Lebih 25 tahun di ``Data Penduduk``
 ```python
 SELECT id, nama_lengkap, kode_kabupaten, nomor_hp,gender,ijazah_terakhir, pekerjaan, penghasilan_bulanan , SUM(tanggal_lahir) FROM penduduk
 GROUP BY nama_lengkap
 HAVING SUM(tanggal_lahir)<1997;
+

@@ -245,16 +245,16 @@ where dt_stueck_titel = 'You Shook Me'
 ![image](https://user-images.githubusercontent.com/100669802/169086959-003cb986-9688-4fda-b6f7-a6dfab0df3d0.png)
 
 
-### Tugas 
-# ``Query data Penduduk``
+## Tugas 
+## ``Query data Penduduk``
 -----
-# Cari Data umur penduduk di kabupaten 3204
+### Cari Data umur penduduk di kabupaten 3204
 
 ```python
 SELECT id, nama_lengkap, kode_kabupaten, nomor_hp, gender, tanggal_lahir, ijazah_terakhir, pekerjaan, penghasilan_bulanan, TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) AS umur FROM penduduk
 WHERE TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) > 25 AND kode_kabupaten='3204';
 ```
-## Sorting Nama Penduduk
+### Sorting Nama Penduduk
 
 ```python
 SELECT * FROM penduduk 

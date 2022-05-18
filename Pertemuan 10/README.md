@@ -243,8 +243,24 @@ from tbl_stueck
 where dt_stueck_titel = 'You Shook Me'
 ```
 
-##Tugas Query data Penduduk
+##Tugas 
+``Query data Penduduk``
 
 ```python
 SELECT id, nama_lengkap, kode_kabupaten, nomor_hp, gender, tanggal_lahir, ijazah_terakhir, pekerjaan, penghasilan_bulanan, TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) AS umur FROM penduduk
 WHERE TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) > 25 AND kode_kabupaten='3204';
+
+**Query untuk mengelompokan umur**
+```python
+SELECT
+    CASE
+        WHEN umur < 20 THEN '... - 20'
+        WHEN umur BETWEEN 20 and 24 THEN '20 - 24'
+        WHEN umur BETWEEN 25 and 29 THEN '25 - 29'
+        WHEN umur >= 30 THEN '30 - ...'
+        WHEN umur IS NULL THEN '(NULL)'
+    END as range_umur,
+    COUNT(*) AS jumlah
+ FROM (select id, nama_lengkap, kode_kabupaten, nomor_hp, gender, tanggal_lahir, ijazah_terakhir, pekerjaan, umur, penghasilan_bulanan, TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) AS umur from penduduk) as dummy_table;
+ GROUP BY range_umur
+ORDER BY range_umur;

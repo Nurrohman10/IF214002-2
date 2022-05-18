@@ -242,26 +242,29 @@ dt_zeit/(select avg(dt_zeit) from tbl_stueck)*100 as Zeit
 from tbl_stueck
 where dt_stueck_titel = 'You Shook Me'
 ```
+![image](https://user-images.githubusercontent.com/100669802/169086959-003cb986-9688-4fda-b6f7-a6dfab0df3d0.png)
+
 
 ### Tugas 
-``Query data Penduduk``
+# ``Query data Penduduk``
 
 ```python
 SELECT id, nama_lengkap, kode_kabupaten, nomor_hp, gender, tanggal_lahir, ijazah_terakhir, pekerjaan, penghasilan_bulanan, TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) AS umur FROM penduduk
 WHERE TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) > 25 AND kode_kabupaten='3204';
 
-###**Query untuk mengelompokan umur**
-
+# Sorting Nama Penduduk
 ```python
-SELECT
-    CASE
-        WHEN umur < 20 THEN '... - 20'
-        WHEN umur BETWEEN 20 and 24 THEN '20 - 24'
-        WHEN umur BETWEEN 25 and 29 THEN '25 - 29'
-        WHEN umur >= 30 THEN '30 - ...'
-        WHEN umur IS NULL THEN '(NULL)'
-    END as range_umur,
-    COUNT(*) AS jumlah
- FROM (select id, nama_lengkap, kode_kabupaten, nomor_hp, gender, tanggal_lahir, ijazah_terakhir, pekerjaan, umur, penghasilan_bulanan, TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) AS umur from penduduk) as dummy_table;
- GROUP BY range_umur
-ORDER BY range_umur;
+SELECT * FROM penduduk 
+ORDER BY nama_lengkap;
+
+# sort 2 kolom
+```python
+SELECT *
+ FROM penduduk
+ ORDER BY nama_lengkap ASC, gender DESC;
+ 
+# Sort data umur Penduduk Lebih 25 tahun
+```python
+SELECT id, nama_lengkap, kode_kabupaten, nomor_hp,gender,ijazah_terakhir, pekerjaan, penghasilan_bulanan , SUM(tanggal_lahir) FROM penduduk
+GROUP BY nama_lengkap
+HAVING SUM(tanggal_lahir)<1997;

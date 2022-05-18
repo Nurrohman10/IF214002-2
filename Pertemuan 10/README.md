@@ -243,14 +243,15 @@ from tbl_stueck
 where dt_stueck_titel = 'You Shook Me'
 ```
 
-##Tugas 
+### Tugas 
 ``Query data Penduduk``
 
 ```python
 SELECT id, nama_lengkap, kode_kabupaten, nomor_hp, gender, tanggal_lahir, ijazah_terakhir, pekerjaan, penghasilan_bulanan, TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) AS umur FROM penduduk
 WHERE TIMESTAMPDIFF(YEAR, tanggal_lahir, CURDATE()) > 25 AND kode_kabupaten='3204';
 
-**Query untuk mengelompokan umur**
+###**Query untuk mengelompokan umur**
+
 ```python
 SELECT
     CASE

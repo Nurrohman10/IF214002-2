@@ -47,6 +47,9 @@ CREATE TABLE olahdata(
   id_author INt NOT NULL PRIMARY KEY,
   nama_author VARCHAR (50) NOT NULL
   );
-  
+  ```
   
 ### Data Manipulation Language (DML)
+
+```python
+INSERT INTO admin ( id_admin, nama_admin, gender, tanggal_lahir, pass_admin, email_admin) VALUES (1, 'ujang aep' , 'F', '1997-04-25', 'aepjang12', 'ujangaep@gmail.com')

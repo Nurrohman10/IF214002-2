@@ -53,3 +53,4 @@ CREATE TABLE olahdata(
 
 ```python
 INSERT INTO admin ( id_admin, nama_admin, gender, tanggal_lahir, pass_admin, email_admin) VALUES (1, 'ujang aep' , 'F', '1997-04-25', 'aepjang12', 'ujangaep@gmail.com')
+INSERT INTO admin ( id_admin, nama_admin, gender, tanggal_lahir, pass_admin, email_admin) VALUES (1, 'uzumaki aep' , 'M', '1990-04-25', 'aepuzumaki12', 'uzumakiaep@gmail.com')

@@ -133,3 +133,14 @@ id_author,
 FROM buku
 GROUP BY id_author
 ```
+```python
+/* nama penduduk dan nama kabupaten nya + umur */
+select
+  nama_user,
+    gender_user,
+    pass_user
+FROM "user" 
+INNER JOIN buku
+ON buku.id_user = "user".id_user
+ORDER by nama_user;
+```

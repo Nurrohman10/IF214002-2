@@ -76,6 +76,7 @@ INSERT INTO "user" (id_user,nama_user,gender_user,pass_user,email_user,history,f
 );
 INSERT INTO "user" (id_user,nama_user,gender_user,pass_user,email_user,history,favorit) VALUES ('3','jajang','m','hknjkea3','jajang@gmail.com','2009-03-03','2010-04-05'
 );
+```
 
 #### buku
 ```python
@@ -102,6 +103,33 @@ id_author,
         
       )
     ) AS tamat
+FROM buku
+GROUP BY id_author
+```
+#### jumlah buku terbaik
+```python
+SELECT 
+id_author,
+
+    COUNT(*) AS jumlah_buku, 
+   
+    (
+      /* Menjumlahkan tiap nilai 1 atau 0 dari tiap record */
+      SUM(
+        /* Untuk tiap record, kalau gendernya M hitung 1 selain itu 0 */
+        CASE WHEN tamat='t' THEN 1 ELSE 0 END
+        )
+        
+      ) as buku_tamat,
+      (
+      /* Menjumlahkan tiap nilai 1 atau 0 dari tiap record */
+      SUM(
+        /* Untuk tiap record, kalau gendernya M hitung 1 selain itu 0 */
+        CASE WHEN terbaik='t' THEN 1 ELSE 0 END
+        )
+        
+      ) as buku_terbaik
+
 FROM buku
 GROUP BY id_author
 ```

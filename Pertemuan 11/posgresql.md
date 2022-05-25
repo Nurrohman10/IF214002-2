@@ -60,6 +60,7 @@ CREATE TABLE IF NOT EXISTS public.olahdata
 
 TABLESPACE pg_default;
 
+```
 
 ### DML
 #### admin

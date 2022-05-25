@@ -92,5 +92,31 @@ INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES
 INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (2, 'black clover', '1', '1', '0', 2);
 INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (3, 'naruto', '1', '1', '0', 3);
 INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (4, 'last boss', '0', '0', '1', 4);
+INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (5, 'Great mage', '1', '1', '0', 2);
+INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (6, 'God thunder', '0', '0', '1', 4);
+INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (7, 'sollev', '1', '1', '0', 3);
 
-
+## Update
+```python
+UPDATE buku 
+SET 
+  nama_buku = 'black clover',
+  terbaru = '1'
+WHERE 
+  id_buku = 2
+  ```
+### DQL (Data query language)
+```python
+SELECT 
+id_author,
+    COUNT(*) AS jumlah_buku,
+    (
+      /* Menjumlahkan tiap nilai 1 atau 0 dari tiap record */
+      SUM(
+        /* Untuk tiap record, kalau gendernya M hitung 1 selain itu 0 */
+        CASE WHEN terbaru='1' THEN 1 ELSE 0 END
+      )
+    ) AS terbaru
+FROM buku
+GROUP BY id_author
+```

@@ -134,7 +134,7 @@ FROM buku
 GROUP BY id_author
 ```
 ```python
-/* nama penduduk dan nama kabupaten nya + umur */
+
 select
   nama_user,
     gender_user,

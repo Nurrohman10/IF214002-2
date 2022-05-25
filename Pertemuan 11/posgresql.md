@@ -85,3 +85,23 @@ iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author) VALUES ('3'
 iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author) VALUES ('4', 'bleach', 't', 'f', 't', '2');
 iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author) VALUES ('5', 'naruto', 'f', 't', 't', '3'); 
 ```
+
+### DQL
+#### jumlah buku tamat
+```python
+SELECT 
+id_author,
+
+    COUNT(*) AS jumlah_buku, 
+   
+    (
+      /* Menjumlahkan tiap nilai 1 atau 0 dari tiap record */
+      SUM(
+        /* Untuk tiap record, kalau gendernya M hitung 1 selain itu 0 */
+        CASE WHEN tamat='t' THEN 1 ELSE 0 END
+        
+      )
+    ) AS tamat
+FROM buku
+GROUP BY id_author
+```

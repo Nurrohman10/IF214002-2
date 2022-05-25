@@ -95,8 +95,10 @@ INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES
 INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (5, 'Great mage', '1', '1', '0', 2);
 INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (6, 'God thunder', '0', '0', '1', 4);
 INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (7, 'sollev', '1', '1', '0', 3);
-
+```
 ## Update
+<!--mengganti status terbaru-->
+
 ```python
 UPDATE buku 
 SET 

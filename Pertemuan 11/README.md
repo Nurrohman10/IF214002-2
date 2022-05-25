@@ -1,4 +1,4 @@
-### Data Definition Language (DDL)
+## Data Definition Language (DDL)
 ### Create Table
 ### Admin
 
@@ -69,7 +69,7 @@ CREATE TABLE olahdata(
  ALTER TABLE buku ADD COLUMN ( tipe SMALLINT)
  ```
   
-### Data Manipulation Language (DML)
+## Data Manipulation Language (DML)
 ### Insert Data
 ### Admin
 ```python

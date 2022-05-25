@@ -45,6 +45,7 @@ CREATE TABLE IF NOT EXISTS public.buku
     terbaik boolean,
     terbaru boolean,
     id_author integer NOT NULL,
+    id_user integer NOT NULL,
     CONSTRAINT buku_pkey PRIMARY KEY (id_buku)
 )
 
@@ -60,6 +61,16 @@ CREATE TABLE IF NOT EXISTS public.olahdata
 
 TABLESPACE pg_default;
 
+```
+```python
+CREATE TABLE IF NOT EXISTS public.author
+(
+    id_author integer NOT NULL,
+    nama_author character varying COLLATE pg_catalog."default",
+    CONSTRAINT author_pkey PRIMARY KEY (id_author)
+)
+
+TABLESPACE pg_default;
 ```
 
 ### DML
@@ -80,11 +91,12 @@ INSERT INTO "user" (id_user,nama_user,gender_user,pass_user,email_user,history,f
 
 #### buku
 ```python
-INSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author) VALUES ('1', 'one peace', 'f', 't', 'f', '1');
-iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author) VALUES ('2', 'black clover', 'f', 't', 'f', '1'); 
-iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author) VALUES ('3', 'god thunder', 't', 't', 'f', '2');
-iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author) VALUES ('4', 'bleach', 't', 'f', 't', '2');
-iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author) VALUES ('5', 'naruto', 'f', 't', 't', '3'); 
+INSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('1', 'one peace', 'f', 't', 'f', '1', '1');
+iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('2', 'black clover', 'f', 't', 'f', '1', '2'); 
+iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('3', 'god thunder', 't', 't', 'f', '2', '2');
+iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('4', 'bleach', 't', 'f', 't', '2', '3');
+iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('5', 'naruto', 'f', 't', 't', '3', '3'); 
+INSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author,id_user) VALUES ('6', 'hero', 't', 't', 't', '1', '1'); 
 ```
 
 ### DQL
@@ -135,12 +147,12 @@ GROUP BY id_author
 ```
 ```python
 
-select
-  nama_user,
-    gender_user,
-    pass_user
-FROM "user" 
-INNER JOIN buku
-ON buku.id_user = "user".id_user
-ORDER by nama_user;
+SELECT
+	A.id_buku id_buku,
+    A.nama_buku nama_buku,
+	g.nama_user nama_user
+FROM
+	buku A
+INNER JOIN "user" G
+    ON a.id_user = a.id_buku
 ```

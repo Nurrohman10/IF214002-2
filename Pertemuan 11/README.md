@@ -1,123 +1,160 @@
 ## Data Definition Language (DDL)
-#### Create Table
-#### Admin
 
+### DDL
 ```python
-CREATE TABLE admin (
-  id_admin INT NOT NULL PRIMARY KEY,
-	nama_admin VARCHAR(50) NOT NULL,
-	gender VARCHAR(50) NOT NULL,
-	tanggal_lahir DATE NOT NULL,
-	pass_admin VARCHAR (30) NOT NULL,
-	email_admin VARCHAR (50) NOT NULL
+CREATE TABLE IF NOT EXISTS public."user"
+(
+    id_user integer NOT NULL,
+    nama_user character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    gender_user character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    pass_user character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    email_user character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    history date,
+    favorit date,
+    CONSTRAINT user_pkey PRIMARY KEY (id_user)
+)
+
+TABLESPACE pg_default;
+
+CREATE TABLE IF NOT EXISTS public.admin
+(
+    id_admin integer NOT NULL,
+    nama_admin character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    gender_admin character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    pass_admin character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    email_admin character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT admin_pkey PRIMARY KEY (id_admin)
+)
+
+TABLESPACE pg_default;
+
+CREATE TABLE IF NOT EXISTS public.baca
+(
+    id_user integer NOT NULL,
+    id_buku integer NOT NULL,
+    history date,
+    favorit date,
+    CONSTRAINT baca_pkey PRIMARY KEY (id_user, id_buku)
+)
+
+TABLESPACE pg_default;
+
+CREATE TABLE IF NOT EXISTS public.buku
+(
+    id_buku integer NOT NULL,
+    nama_buku character varying COLLATE pg_catalog."default",
+    tamat boolean,
+    terbaik boolean,
+    terbaru boolean,
+    id_author integer NOT NULL,
+    id_user integer NOT NULL,
+    CONSTRAINT buku_pkey PRIMARY KEY (id_buku)
+)
+
+TABLESPACE pg_default;
+
+CREATE TABLE IF NOT EXISTS public.olahdata
+(
+    id_admin integer NOT NULL,
+    id_buku integer NOT NULL,
+    data_buku date,
+    CONSTRAINT olahdata_pkey PRIMARY KEY (id_admin, id_buku)
+)
+
+TABLESPACE pg_default;
+
+```
+```python
+CREATE TABLE IF NOT EXISTS public.author
+(
+    id_author integer NOT NULL,
+    nama_author character varying COLLATE pg_catalog."default",
+    CONSTRAINT author_pkey PRIMARY KEY (id_author)
+)
+
+TABLESPACE pg_default;
+```
+
+### DML (Data Manipulation language)
+#### admin
+```python
+INSERT INTO ADMIN (id_admin,nama_admin,gender_admin,pass_admin,email_admin) VALUES ('1', 'umild', 'f','bsyw7', 'umild@gmail.com');
+INSERT INTO ADMIN (id_admin,nama_admin,gender_admin,pass_admin,email_admin) VALUES ('2', 'jaki', 'f','bjn6yw7', 'jakisd@gmail.com');
+```
+#### user
+```python
+INSERT INTO "user" (id_user,nama_user,gender_user,pass_user,email_user,history,favorit) VALUES ('1','kholis','f','hbjha3','kholis@gmail.com','2001-01-03','2001-04-05'
+);
+INSERT INTO "user" (id_user,nama_user,gender_user,pass_user,email_user,history,favorit) VALUES ('2','rijik','f','hbvsha3','rijik@gmail.com','2002-01-03','2003-04-05'
+);
+INSERT INTO "user" (id_user,nama_user,gender_user,pass_user,email_user,history,favorit) VALUES ('3','jajang','m','hknjkea3','jajang@gmail.com','2009-03-03','2010-04-05'
 );
 ```
-#### User
 
+#### buku
 ```python
-CREATE TABLE user (
-  id_user INT NOT NULL PRIMARY KEY,
-	nama_user VARCHAR(50) NOT NULL,
-	gender VARCHAR(50) NOT NULL,
-	tanggal_lahir DATE NOT NULL,
-	pass_user VARCHAR (30) NOT NULL,
-  history DATETIME NULL ,
-  favorit DATETIME NULL ,
-	email_user VARCHAR (50) NOT NULL
-);
-```
-#### Buku
-
-```python
-CREATE TABLE buku (
-  id_buku INT NOT NULL PRIMARY KEY,
-  nama_buku VARCHAR (50) NOT NULL,
-  tamat BOOLEAN NULL,
-  terbaik BOOLEAN NULL,
-  terbaru BOOLEAN NULL,
-  id_author INT NOT NULL
-);
-```
-#### Olah Data
-```python
-CREATE TABLE olahdata(
-  id_admin INT NOT NULL,
-  id_buku INT NOT NULL,
-  data_buku DATETIMe NULL
-  );
-  ```
-  
- #### Baca
- ```python
-  CREATE TABLE baca(
-  id_user INT NOT NULL PRIMARY KEY,
-  id_buku Int NOT NULL,
-  history DATETIME NULL,
-  favorit DATETIME NULL
-  );
-```
-#### author
-
-```python
-  CREATE TABLE author(
-  id_author INt NOT NULL PRIMARY KEY,
-  nama_author VARCHAR (50) NOT NULL
-  );
-  ```
- #### Alter Table
- ```python
- ALTER TABLE buku ADD COLUMN ( tipe SMALLINT)
- ```
-  
-### Data Manipulation Language (DML)
-#### Insert Data
-#### Admin
-```python
-INSERT INTO admin ( id_admin, nama_admin, gender, tanggal_lahir, pass_admin, email_admin) VALUES (1, 'ujang aep' , 'F', '1997-04-25', 'aepjang12', 'ujangaep@gmail.com');
-INSERT INTO admin ( id_admin, nama_admin, gender, tanggal_lahir, pass_admin, email_admin) VALUES (1, 'uzumaki aep' , 'M', '1990-04-25', 'aepuzumaki12', 'uzumakiaep@gmail.com');
-INSERT INTO admin ( id_admin, nama_admin, gender, tanggal_lahir, pass_admin, email_admin) VALUES (3, 'gusujang ' , 'F', '1996-09-25', 'gusujang12', 'gusujangaep@gmail.com');
-INSERT INTO admin ( id_admin, nama_admin, gender, tanggal_lahir, pass_admin, email_admin) VALUES (4, 'sasuke' , 'M', '1993-01-05', 'sasuke12', 'sasukeaep@gmail.com');
+INSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('1', 'one peace', 'f', 't', 'f', '1', '1');
+iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('2', 'black clover', 'f', 't', 'f', '1', '2'); 
+iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('3', 'god thunder', 't', 't', 'f', '2', '2');
+iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('4', 'bleach', 't', 'f', 't', '2', '3');
+iNSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author, id_user) VALUES ('5', 'naruto', 'f', 't', 't', '3', '3'); 
+INSERT INTO buku (id_buku,nama_buku,tamat,terbaik,terbaru,id_author,id_user) VALUES ('6', 'hero', 't', 't', 't', '1', '1'); 
 ```
 
-#### User
-```python
-INSERT INTO user ( id_user, nama_user, gender, tanggal_lahir, pass_user, email_user, history, favorit) VALUES (1, 'sujang aep' , 'F', '1987-04-25', 'sepajang12', 'sujangsaep@gmail.com', '2022-01-02', '2022-02-04');
-INSERT INTO user ( id_user, nama_user, gender, tanggal_lahir, pass_user, email_user, history, favorit) VALUES (2, 'fajar' , 'F', '2001-04-25', 'ksnjde12', 'fajar@gmail.com', '2022-11-12', '2022-12-07');
-INSERT INTO user ( id_user, nama_user, gender, tanggal_lahir, pass_user, email_user, history, favorit) VALUES (3, 'rijik' , 'M', '1989-04-15', 'xjdeg12', 'rijik@gmail.com', '2022-11-11', '2022-12-02');
-```
-
-#### Buku
-```python
-INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (1, 'One peace', '0', '1', '1', 1);
-INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (2, 'black clover', '1', '1', '0', 2);
-INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (3, 'naruto', '1', '1', '0', 3);
-INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (4, 'last boss', '0', '0', '1', 4);
-INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (5, 'Great mage', '1', '1', '0', 2);
-INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (6, 'God thunder', '0', '0', '1', 4);
-INSERT INTO buku (id_buku, nama_buku, tamat, terbaik, terbaru, id_author) VALUES (7, 'sollev', '1', '1', '0', 3);
-```
-#### Update
-
-```python
-UPDATE buku 
-SET 
-  nama_buku = 'black clover',
-  terbaru = '1'
-WHERE 
-  id_buku = 2
-  ```
 ### DQL (Data query language)
+#### jumlah buku tamat
 ```python
 SELECT 
 id_author,
-    COUNT(*) AS jumlah_buku,
+
+    COUNT(*) AS jumlah_buku, 
+   
     (
       /* Menjumlahkan tiap nilai 1 atau 0 dari tiap record */
       SUM(
         /* Untuk tiap record, kalau gendernya M hitung 1 selain itu 0 */
-        CASE WHEN terbaru='1' THEN 1 ELSE 0 END
+        CASE WHEN tamat='t' THEN 1 ELSE 0 END
+        
       )
-    ) AS terbaru
+    ) AS tamat
 FROM buku
 GROUP BY id_author
+```
+#### jumlah buku terbaik
+```python
+SELECT 
+id_author,
+
+    COUNT(*) AS jumlah_buku, 
+   
+    (
+      /* Menjumlahkan tiap nilai 1 atau 0 dari tiap record */
+      SUM(
+        /* Untuk tiap record, kalau gendernya M hitung 1 selain itu 0 */
+        CASE WHEN tamat='t' THEN 1 ELSE 0 END
+        )
+        
+      ) as buku_tamat,
+      (
+      /* Menjumlahkan tiap nilai 1 atau 0 dari tiap record */
+      SUM(
+        /* Untuk tiap record, kalau gendernya M hitung 1 selain itu 0 */
+        CASE WHEN terbaik='t' THEN 1 ELSE 0 END
+        )
+        
+      ) as buku_terbaik
+
+FROM buku
+GROUP BY id_author
+```
+```python
+
+SELECT
+	A.id_buku id_buku,
+    A.nama_buku nama_buku,
+	g.nama_user nama_user
+FROM
+	buku A
+INNER JOIN "user" G
+    ON a.id_user = a.id_buku
 ```

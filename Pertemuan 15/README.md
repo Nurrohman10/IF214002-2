@@ -3,15 +3,15 @@
 
 #1 Membangun Database : MySQL
 
-1 Memodelkan data dari proses bisnis organisasi ke dalam database. Contoh:
-- Data penduduk
-- Data wilayah Output: Tabel database & data sampel
-2 Menentukan masalah-masalah kritikal dan prioritas dari proses bisnis organisasi. Contoh:
-- Menentukan berapa banyak penduduk yang belum memiliki pekerjaan
-- Mengetahui daerah mana dengan tingkat pengangguran tertinggi Output: List pertanyaan2 terkait masalah kritikal prioritas
-3 Membuat query untuk kebutuhan operasional dan analisis. Contoh:
-- Operasional: CRUD
-- Analisis: Agregat, Trend, Sorting & Filtering Output: Query CRUD dan analisis
+- Memodelkan data dari proses bisnis organisasi ke dalam database. Contoh:
+  - Data penduduk
+  - Data wilayah Output: Tabel database & data sampel
+- Menentukan masalah-masalah kritikal dan prioritas dari proses bisnis organisasi. Contoh:
+  - Menentukan berapa banyak penduduk yang belum memiliki pekerjaan
+  - Mengetahui daerah mana dengan tingkat pengangguran tertinggi Output: List pertanyaan2 terkait masalah kritikal prioritas
+- Membuat query untuk kebutuhan operasional dan analisis. Contoh:
+  - Operasional: CRUD
+  - Analisis: Agregat, Trend, Sorting & Filtering Output: Query CRUD dan analisis
 
 #2 Membangun Web Service : PHP
 

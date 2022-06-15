@@ -1,7 +1,7 @@
 
 ## Membangun Database, Web Service, Aplikasi CRUD dan Visualisasi Data dengan MySQL, PHP, dan Javascript
 
-#### 1 Membangun Database : MySQL
+### #1 Membangun Database : MySQL
 
 - Memodelkan data dari proses bisnis organisasi ke dalam database. Contoh:
   - Data penduduk
@@ -13,21 +13,21 @@
   - Operasional: CRUD
   - Analisis: Agregat, Trend, Sorting & Filtering Output: Query CRUD dan analisis
 
-#### 2 Membangun Web Service : PHP
+### #2 Membangun Web Service : PHP
 
 - Konsep Web Service, Backend, Frontend dan HTTP
 - URL routing berbasis HTTP
 - Koneksi dan eksekusi operasi ke database menggunakan query yang telah dibuat
 - Meneruskan data output dalam bentuk JSON
 
-#### 3 Membangun Aplikasi CRUD : Javascript
+### #3 Membangun Aplikasi CRUD : Javascript
 
 - Konsep HTTP client
 - Membuat form
 - Request HTTP ke web service
 - Menampilkan data
 
-#### 4 Membuat Visualisasi Data : Javascript
+### #4 Membuat Visualisasi Data : Javascript
 
 - Menentukan bentuk visualisasi data berdasarkan masalah2 kritikal prioritas
 - Request HTTP ke web service

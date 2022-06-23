@@ -15,7 +15,10 @@
 
 ### data buku
 ```python
-$result = pg_query($dbconn, "select id_author, COUNT(*) AS jumlah_buku from buku group by id_author order by id_author; ") or exit("Error with quering database");
+$result = pg_query($dbconn, "select id_author, 
+COUNT(*) AS jumlah_buku from buku group by id_author order by id_author; ") 
+or exit("Error with quering database");
 ```
 
-![image](https://user-images.githubusercontent.com/100669802/175276128-7afcc4b5-abf7-4838-8d20-f27ca11f93b3.png)
+![image](https://user-images.githubusercontent.com/100669802/175284940-9bd96d06-9dbe-40a4-9b81-6fc0c4ca3194.png)
+

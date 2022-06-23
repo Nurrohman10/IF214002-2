@@ -9,8 +9,11 @@
 ### tes webservice
 ![image](https://user-images.githubusercontent.com/100669802/175016826-f06de73d-0d94-4b81-8a0e-2bb438773da8.png)
 
-### data dummy
-![image](https://user-images.githubusercontent.com/100669802/175278307-3f1eea72-f0e0-470a-a275-5d09ba8b5569.png)
+#### pengunjung buku
+![image](https://user-images.githubusercontent.com/100669802/175284108-cd302917-e217-4edd-a65d-e0efca440c71.png)
 
-### data buku
+#### data buku
+```python
+$result = pg_query($dbconn, "select id_author, COUNT(*) AS jumlah_buku from buku group by id_author order by id_author; ") or exit("Error with quering database");
+```
 ![image](https://user-images.githubusercontent.com/100669802/175276128-7afcc4b5-abf7-4838-8d20-f27ca11f93b3.png)

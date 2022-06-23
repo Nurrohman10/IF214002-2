@@ -158,3 +158,14 @@ FROM
 INNER JOIN "user" G
     ON a.id_user = a.id_buku
 ```
+```python
+select 
+id_author,
+COUNT(*) AS jumlah_buku
+   
+   
+
+
+from buku
+group by id_author
+```

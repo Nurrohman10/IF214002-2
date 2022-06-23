@@ -12,7 +12,7 @@ $dbname = "books";
   
   $request = $_SERVER['REQUEST_URI'];
   
-  function ambilSemuaDataKomiku($host, $dbuser, $dbpass, $port, $dbname) {
+  function ambilSemuaDataBuku($host, $dbuser, $dbpass, $port, $dbname) {
     try {
       
       // Coba dulu apa yang ada di sini,
@@ -39,6 +39,6 @@ $dbname = "books";
       echo "Sebab gagalnya: " . $e->getMessage();
     }
   }
-      ambilSemuaDataKomiku($host, $dbuser, $dbpass, $port, $dbname);  
+      ambilSemuaDataBuku($host, $dbuser, $dbpass, $port, $dbname);  
   
 ?>

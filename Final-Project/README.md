@@ -50,16 +50,17 @@ aplikasi ini dirancang untuk mempermudah pembaca buku secara online. beberapa fi
 - views_buku
 
 ---
-### [DDL,DML,DQL](https://github.com/Nurkholis070401/IF214002/tree/main/Pertemuan%2011)
+
 ## ERD Aplikasi Buku
 ![ERD-project drawio](https://user-images.githubusercontent.com/100669802/176473084-acbd9ea2-eac0-4f59-9ca7-01ac7a233aee.png)
 ![ERD-project](https://user-images.githubusercontent.com/100669802/176473174-1264e9e2-37cd-465b-bd41-d5525a769c60.png)
 
 ---
 
-- [Webservice](https://github.com/Nurkholis070401/IF214002/blob/main/Pertemuan%2014/Webservice.php) 
-- [Visualisasi Data](https://github.com/Nurkholis070401/IF214002/blob/main/Pertemuan%2014/visualizationData.php) 
-- [BooksApp]
+### [DDL,DML,DQL](https://github.com/Nurkholis070401/IF214002/tree/main/Pertemuan%2011) - SQL Menggunakan DB pgsql
+- [Webservice](https://github.com/Nurkholis070401/IF214002/blob/main/Pertemuan%2014/Webservice.php) - Tes webservice
+- [Visualisasi Data](https://github.com/Nurkholis070401/IF214002/blob/main/Pertemuan%2014/visualizationData.php) - Menampilkan data Query buku
+- [BooksApp] 
 ---
 
 ![image](https://user-images.githubusercontent.com/100669802/175284940-9bd96d06-9dbe-40a4-9b81-6fc0c4ca3194.png)

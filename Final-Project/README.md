@@ -5,6 +5,9 @@ aplikasi ini dirancang untuk mempermudah pembaca buku secara online. beberapa fi
   - berbagai cerita menarik lainnya
   - fitur optimasi layar untuk membaca
   - perpustakaan bacaan
+  - navigasi
+  - bookmark
+  - table of contens
 
 ## Entitas dan Atribut
 ### Admin

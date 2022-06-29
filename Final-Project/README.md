@@ -57,6 +57,6 @@ aplikasi ini dirancang untuk mempermudah pembaca buku secara online. beberapa fi
 
 ---
 
-- [Webservice] (https://github.com/Nurkholis070401/IF214002/blob/main/Pertemuan%2014/Webservice.php) - tes
-- [Visualisasi Data] (https://github.com/Nurkholis070401/IF214002/blob/main/Pertemuan%2014/visualizationData.php) -tes
+- [Webservice](https://github.com/Nurkholis070401/IF214002/blob/main/Pertemuan%2014/Webservice.php) 
+- [Visualisasi Data](https://github.com/Nurkholis070401/IF214002/blob/main/Pertemuan%2014/visualizationData.php) 
 

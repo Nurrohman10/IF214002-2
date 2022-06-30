@@ -1,2 +1,1 @@
-
-![WhatsApp Image 2022-04-02 at 15 59 50](https://user-images.githubusercontent.com/100669802/161376173-47c99901-6c25-4bd1-8f05-c792d40e0940.jpeg)
+![Pertemuan3 drawio (2)](https://user-images.githubusercontent.com/100669802/176745977-decbd7d2-26f7-4188-ab45-e5512e08e452.png)

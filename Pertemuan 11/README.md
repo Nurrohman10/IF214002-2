@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS public."user"
     email_user character varying(50) COLLATE pg_catalog."default" NOT NULL,
     history date,
     favorit date,
+    register character varying COLLATE pg_catalog."default",
     CONSTRAINT user_pkey PRIMARY KEY (id_user)
 )
 
@@ -34,7 +35,17 @@ CREATE TABLE IF NOT EXISTS public.baca
     id_buku integer NOT NULL,
     history date,
     favorit date,
-    CONSTRAINT baca_pkey PRIMARY KEY (id_user, id_buku)
+    CONSTRAINT baca_pkey PRIMARY KEY (id_user, id_buku),
+    CONSTRAINT id_buku FOREIGN KEY (id_buku)
+        REFERENCES public.buku (id_buku) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID,
+    CONSTRAINT id_user FOREIGN KEY (id_user)
+        REFERENCES public."user" (id_user) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
 )
 
 TABLESPACE pg_default;
@@ -48,7 +59,22 @@ CREATE TABLE IF NOT EXISTS public.buku
     terbaru boolean,
     id_author integer NOT NULL,
     id_user integer NOT NULL,
-    CONSTRAINT buku_pkey PRIMARY KEY (id_buku)
+    CONSTRAINT buku_pkey PRIMARY KEY (id_buku),
+    CONSTRAINT id_author FOREIGN KEY (id_author)
+        REFERENCES public.author (id_author) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID,
+    CONSTRAINT id_user FOREIGN KEY (id_user)
+        REFERENCES public."user" (id_user) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID,
+    CONSTRAINT terbaik FOREIGN KEY (terbaik)
+        REFERENCES public.terbaik (terbaik) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
 )
 
 TABLESPACE pg_default;
@@ -58,7 +84,17 @@ CREATE TABLE IF NOT EXISTS public.olahdata
     id_admin integer NOT NULL,
     id_buku integer NOT NULL,
     data_buku date,
-    CONSTRAINT olahdata_pkey PRIMARY KEY (id_admin, id_buku)
+    CONSTRAINT olahdata_pkey PRIMARY KEY (id_admin, id_buku),
+    CONSTRAINT id_admin FOREIGN KEY (id_admin)
+        REFERENCES public.admin (id_admin) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID,
+    CONSTRAINT id_buku FOREIGN KEY (id_buku)
+        REFERENCES public.buku (id_buku) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
 )
 
 TABLESPACE pg_default;
@@ -70,6 +106,15 @@ CREATE TABLE IF NOT EXISTS public.author
     id_author integer NOT NULL,
     nama_author character varying COLLATE pg_catalog."default",
     CONSTRAINT author_pkey PRIMARY KEY (id_author)
+)
+
+TABLESPACE pg_default;
+
+CREATE TABLE IF NOT EXISTS public.terbaik
+(
+    terbaik boolean NOT NULL,
+    views_buku integer,
+    CONSTRAINT terbaik_pkey PRIMARY KEY (terbaik)
 )
 
 TABLESPACE pg_default;
